@@ -1,1 +1,10 @@
-/venvi
+__pycache__/
+*.pyc
+*.log
+*.DS_Store
+.vscode/
+.env
+venv/
+*.sqlite3
+*.h5
+DATA_IMG/
