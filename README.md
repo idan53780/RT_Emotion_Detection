@@ -76,7 +76,7 @@ Here are some previews of the app in action:
 |------------|-------------------|
 | ![Start Menu](assets/start_menu.png) | ![Emotion Detection](assets/emotion_detection.png) |
 
-> 🔧 You can add screenshots by placing image files in an `assets/` folder and referencing them like above.
+
 
 <br><br>
 
