@@ -134,6 +134,8 @@ This project is currently in development. The following features are still in pr
 * Performance optimization
 
 
+## 🙋‍♂️ Author
+Created by Idan53780
 
 
 
