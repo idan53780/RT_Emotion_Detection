@@ -23,7 +23,7 @@ The goal is to create a tool that can assist in applications such as:
 - Detects human emotions (e.g., Happy, Sad, Angry) in real-time.
 - Works with webcam or video file input.
 - Uses pre-trained deep learning models.
-- GUI with:
+- GUI with: (in development)
   - Start menu
   - Source switch (webcam/video file)
   - Screenshot capture functionality
@@ -35,25 +35,25 @@ The goal is to create a tool that can assist in applications such as:
 - **TensorFlow**
 - **OpenCV**
 - **NumPy**
-- **Keras (with pre-trained model)**
+- **Deepface (with pre-trained model)**
   
-
+## 🖼️ Logo Integration
+ Logo is displayed in the bottom-left corner during runtime.
 
 ## 📁 Project Structure
 
 ```plaintext
 RT_Emotion_Detection/
-├── assets/                          # Screenshots and UI images (optional)
+├── assets/                          
 │   ├── start_menu.png
 │   └── emotion_detection.png
-├── data/                            # Sample video or image files
 ├── models/                          # Pre-trained models and classifiers
-│   ├── emotion_model.h5
-│   └── haarcascade_frontalface_default.xml
+│   ├── haarcascade_frontalface_default.xml
+│   └── 
 ├── src/                             # Source code and main app logic
-│   └── main.py
+|   ├── main.py                        
+│   └── logo_icon.png
 ├── .gitignore
-├── LICENSE
 ├── README.md
 ├── requirements.txt
 └── venvi/                           # Virtual environment (excluded from Git)
