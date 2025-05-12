@@ -19,14 +19,15 @@ The goal is to create a tool that can assist in applications such as:
 <br>
 
 ## 📌 Features
+- Real-time webcam or video file input
+- Emotion detection using [DeepFace](https://github.com/serengil/deepface)
+- Face detection via:
+  - Haar Cascade (default)
+  - OpenCV DNN (deep learning-based, toggleable in app)
+- Project logo overlay
+- GUI 
+- Screenshot and video source switching 
 
-- Detects human emotions (e.g., Happy, Sad, Angry) in real-time.
-- Works with webcam or video file input.
-- Uses pre-trained deep learning models.
-- GUI with:
-  - Start menu
-  - Source switch (webcam/video file)
-  - Screenshot capture functionality
 <br>
 
 ## 🛠️ Tech Stack
@@ -35,7 +36,8 @@ The goal is to create a tool that can assist in applications such as:
 - **TensorFlow**
 - **OpenCV**
 - **NumPy**
-- **Keras (with pre-trained model)**
+- **TKinter**
+- **Pillow**
   
 
 
@@ -43,13 +45,11 @@ The goal is to create a tool that can assist in applications such as:
 
 ```plaintext
 RT_Emotion_Detection/
-├── assets/                          # Screenshots and UI images (optional)
-│   ├── start_menu.png
-│   └── emotion_detection.png
-├── data/                            # Sample video or image files
+
 ├── models/                          # Pre-trained models and classifiers
-│   ├── emotion_model.h5
-│   └── haarcascade_frontalface_default.xml
+│   ├──  haarcascade_frontalface_default.xml
+|   ├──  opencv_face_detector.pbtxt
+│   └──  opencv_face_detector_uint8.pb 
 ├── src/                             # Source code and main app logic
 │   └── main.py
 ├── .gitignore
@@ -67,18 +67,6 @@ Significant changes to the code, features, and functionality may occur.
 
 ```
 
-
-## 📷 Screenshots
-
-Here are some previews of the app in action:
-
-| Start Menu | Emotion Detection |
-|------------|-------------------|
-| ![Start Menu](assets/start_menu.png) | ![Emotion Detection](assets/emotion_detection.png) |
-
-
-
-<br><br>
 
 ## 🚀 Getting Started
 
