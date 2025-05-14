@@ -1,6 +1,7 @@
-﻿deepface==0.0.93
+deepface==0.0.93
 numpy==1.23.5
 opencv-python==4.11.0.86
 pillow==11.2.1
 tensorflow==2.10.0
 tensorflow-estimator==2.10.0
+
