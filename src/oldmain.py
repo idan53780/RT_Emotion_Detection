@@ -1,3 +1,4 @@
+"""
 import os
 import cv2
 import numpy as np
@@ -18,7 +19,7 @@ class EmotionDetectionApp:
         
         # Load logo
         try:
-            self.logo_img = Image.open('src/logo_icon.png')
+            self.logo_img = Image.open('assests/logo_icon.png')
             self.logo_img = self.logo_img.resize((60, 60), Image.LANCZOS)
             self.logo_photo = ImageTk.PhotoImage(self.logo_img)
         except Exception as e:
@@ -36,7 +37,7 @@ class EmotionDetectionApp:
         self.history_length = 5  # Number of frames to consider for smoothing
         self.detection_models = {
             "Haar Cascade": cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'),
-            "DNN": None  # Will be initialized on demand
+            "DNN": None  # Will be initialized on when toggled
         }
         self.current_detector = "Haar Cascade"
         self.emotion_models = ["VGG-Face", "Facenet", "Facenet512", "OpenFace", "DeepFace", "DeepID", "ArcFace", "Dlib"]
@@ -143,7 +144,7 @@ class EmotionDetectionApp:
         )
         exit_btn.pack(pady=10)
         
-        # Footer with version and author
+        #  version and author
         footer = tk.Label(
             main_frame, 
             text="v1.0.0 | Created by Idan53780", 
@@ -156,7 +157,7 @@ class EmotionDetectionApp:
     def open_settings(self):
         settings_window = tk.Toplevel(self.root)
         settings_window.title("EmotionLens Settings")
-        settings_window.geometry("500x500")
+        settings_window.geometry("600x600")
         settings_window.configure(bg="#2c3e50")
         settings_window.grab_set()  # Modal window
         
@@ -473,7 +474,7 @@ class EmotionDetectionApp:
         version_label.pack(side=tk.RIGHT, padx=10, pady=5)
     
     def process_video(self):
-        """Process video frames in a separate thread"""
+        #Process video frames in a separate thread
         try:
             while self.is_running and self.cap is not None:
                 ret, frame = self.cap.read()
@@ -508,7 +509,7 @@ class EmotionDetectionApp:
                 self.cap.release()
     
     def process_frame(self):
-        """Process a single frame for emotion detection"""
+        #Process a single frame for emotion detection
         if self.current_frame is None:
             return
         
@@ -589,7 +590,7 @@ class EmotionDetectionApp:
                         emotion_text,
                         (x1, y1 - 10),
                         cv2.FONT_HERSHEY_SIMPLEX,
-                        0.7,
+                        1,
                         (255, 255, 0),
                         2,
                         cv2.LINE_AA
@@ -639,7 +640,7 @@ class EmotionDetectionApp:
         self.update_display()
     
     def process_image(self):
-        """Process a single image for emotion detection"""
+        #Process a single image for emotion detection
         if self.current_frame is None:
             return
         
@@ -650,7 +651,7 @@ class EmotionDetectionApp:
         threading.Thread(target=self._process_image_thread).start()
     
     def _process_image_thread(self):
-        """Image processing in a separate thread"""
+        #Image processing in a separate thread
         try:
             # Process the frame
             self.process_frame()
@@ -662,7 +663,7 @@ class EmotionDetectionApp:
             self.root.after(0, lambda: self.status_label.config(text=f"Error: {str(e)}"))
     
     def create_image_analysis_interface(self):
-        """Create interface for image analysis"""
+        #Create interface for image analysis
         # Clear the root window
         for widget in self.root.winfo_children():
             widget.destroy()
@@ -742,7 +743,7 @@ class EmotionDetectionApp:
         self.status_label.pack(side=tk.LEFT, padx=10, pady=5)
     
     def get_smoothed_emotion(self):
-        """Apply temporal smoothing to emotions"""
+        #Apply temporal smoothing to emotions
         if not self.emotion_history:
             return ("neutral", 0.0)
             
@@ -768,7 +769,7 @@ class EmotionDetectionApp:
         return (smoothed_emotion, avg_confidence)
     
     def update_display(self):
-        """Update the video display with the current frame"""
+        #Update the video display with the current frame
         if self.frame_with_detection is None or not self.is_running:
             return
             
@@ -819,7 +820,7 @@ class EmotionDetectionApp:
             pass
     
     def take_screenshot(self):
-        """Take a screenshot of the current frame with detections"""
+        #Take a screenshot of the current frame with detections
         if self.frame_with_detection is None:
             messagebox.showinfo("Screenshot", "No image to capture")
             return
@@ -828,7 +829,7 @@ class EmotionDetectionApp:
         os.makedirs("screenshots", exist_ok=True)
         
         # Generate filename with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        timestamp = datetime.now().strftime("%Y_%m_%d_%H:%M:%S")
         filename = f"screenshots/emotion_detection_{timestamp}.png"
         
         # Save the screenshot
@@ -841,7 +842,7 @@ class EmotionDetectionApp:
         messagebox.showinfo("Screenshot", f"Screenshot saved as {filename}")
     
     def save_analysis(self):
-        """Save the analyzed image"""
+        #Save the analyzed image
         if self.frame_with_detection is None:
             messagebox.showinfo("Save", "No image to save")
             return
@@ -868,7 +869,7 @@ class EmotionDetectionApp:
         messagebox.showinfo("Save", f"Analysis result saved as {filename}")
     
     def stop_and_return(self):
-        """Stop video processing and return to start screen"""
+        #Stop video processing and return to start screen
         self.is_running = False
         if self.thread is not None:
             self.thread.join(1.0)  # Wait for the thread to finish
@@ -890,3 +891,5 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = EmotionDetectionApp(root)
     root.mainloop()
+"""
+        
