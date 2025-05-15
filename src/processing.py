@@ -161,5 +161,4 @@ def _process_image_thread(app):
         process_frame(app)
         app.root.after(0, lambda: app.status_label.config(text="Analysis complete"))
     except Exception as e:
-        print(f"Error in image processing: {e}")
         app.root.after(0, lambda: app.status_label.config(text=f"Error: {str(e)}"))

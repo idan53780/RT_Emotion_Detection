@@ -1,0 +1,126 @@
+[33mcommit fd3f043ccb830dc3653e23c66d7d2b3ae360289e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfix-image_analysis-feature[m[33m, [m[1;31morigin/fix-image_analysis-feature[m[33m)[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Thu May 15 20:19:25 2025 +0300
+
+     last changes has been revert (caused prob) | used directly ui of image_anly...
+
+[33mcommit 4f52a67cc8ea9624491b60606513bb49c8352d84[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Thu May 15 15:33:09 2025 +0300
+
+    implemented new logic in process_image func in processing.py
+
+[33mcommit 6e9b73cb0f8eda8b7b4bdfe47ec63c9a09dbd31a[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Thu May 15 15:16:44 2025 +0300
+
+    a new function: display_image
+
+[33mcommit 9d3e9379df171aa7cbbd29d790c0eef1f6de85f5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 8258724 5542e77
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Wed May 14 21:33:55 2025 +0300
+
+    Merge pull request #2
+    
+    Project structure - split the main into files
+
+[33mcommit 5542e7716c0dd2f4df1abdea99ea39ca9e741410[m
+Merge: 64a4cd5 8258724
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Wed May 14 21:33:27 2025 +0300
+
+    Merge branch 'master' into _project_structure
+
+[33mcommit 64a4cd5389e51ae43d1d93e672452a1d520fd428[m[33m ([m[1;31morigin/_project_structure[m[33m, [m[1;32m_project_structure[m[33m)[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Wed May 14 21:03:26 2025 +0300
+
+     project stracture orginizaion
+
+[33mcommit 8258724792887b990f53b082e20e9992c63a0de2[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Tue May 13 00:02:08 2025 +0300
+
+    Update README.md
+
+[33mcommit b5194ac3c7bd60095f3a3470c6f76f8f89d5d80b[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Tue May 13 00:01:11 2025 +0300
+
+    Update requirements.txt
+
+[33mcommit 2d42f24720aa4184b8c2ee80be95e2714a88bfdc[m[33m ([m[1;31morigin/work_on_GUI[m[33m)[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Mon May 12 21:16:15 2025 +0300
+
+    Update README.md
+
+[33mcommit 3f234f9b032f1ed0dc8fdbfd3a93482e11299175[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Mon May 12 21:02:51 2025 +0300
+
+    new req file
+
+[33mcommit dd7c292fcc701c9e4610c641251b0a69998c492b[m
+Merge: 4644c9b 3677127
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Mon May 12 20:43:45 2025 +0300
+
+    Merge pull request #1 from idan53780/work_on_GUI
+    
+    gui and completely new main
+
+[33mcommit 36771276e8288e229d2457eeb807f97d758cf775[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Mon May 12 20:32:04 2025 +0300
+
+    gui and completly new main
+
+[33mcommit 4644c9b8e07648139a0aaa985940b0dc5353e755[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Sat May 10 21:39:21 2025 +0300
+
+    Update README.md
+
+[33mcommit 45d34dbb5c09033295419dae356b4eb0828cdb6c[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Sat May 10 21:24:25 2025 +0300
+
+    new main py
+
+[33mcommit d0135a4a1c53650bca748c233f9e2096e20fdfe1[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Wed May 7 16:50:45 2025 +0300
+
+    Update README.md
+
+[33mcommit b34666fe821be2207428e9025952108d7d223c06[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Wed May 7 16:27:04 2025 +0300
+
+    Update README.md
+
+[33mcommit 03d899297388aed547811be57c8db56997663231[m
+Author: Idan Apo <idan53780@gmail.com>
+Date:   Wed May 7 16:25:19 2025 +0300
+
+    Create README.md
+
+[33mcommit a7bd913a5073fbe8e027e7b85984a5e79b7a4a55[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Wed May 7 15:34:22 2025 +0300
+
+    Ignore virtual environment and clean up repo stracture
+
+[33mcommit f7be488c4a5dfb1b3a436a1db521261ed690df0b[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Wed May 7 14:57:25 2025 +0300
+
+    Readme file has been added
+
+[33mcommit c11a03c4ab936ddfb3aa9fdbf806adf518ac077c[m
+Author: Idan A <idan53780@gmail.com>
+Date:   Wed May 7 14:27:49 2025 +0300
+
+    inital commit - Add project files with .gitignore - gitignore contains only the venvi

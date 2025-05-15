@@ -5,6 +5,6 @@ if __name__ == "__main__":
     try:
         root = tk.Tk()
         app = EmotionDetectionApp(root)
-        root.mainloop()  # Add parentheses
+        root.mainloop()  
     except Exception as e:
         print(f"Error: {e}")

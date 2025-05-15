@@ -4,12 +4,13 @@ from tkinter import messagebox, filedialog
 from PIL import Image, ImageTk
 import threading
 from .config import DETECTION_MODELS, EMOTION_MODELS, DEFAULT_DETECTOR, DEFAULT_EMOTION_MODEL, CONFIDENCE_THRESHOLD, HISTORY_LENGTH
-from .ui import create_start_screen, open_settings, create_app_interface
-from .processing import process_video, process_image
+from .ui import create_start_screen, open_settings, create_app_interface,create_image_analysis_interface
+from .processing import process_video, _process_image_thread,process_image
 from .utils import get_smoothed_emotion, take_screenshot, save_analysis
 
 class EmotionDetectionApp:
     def __init__(self, root):
+        print("__init__: EmotionDetectionApp initialized")
         self.root = root
         self.root.title("EmotionLens - Real-Time Emotion Detection")
         self.root.geometry("1200x700")
@@ -70,6 +71,7 @@ class EmotionDetectionApp:
         messagebox.showinfo("Settings Saved", "Your settings have been saved successfully.")
     
     def start_detection(self, source_type):
+        print(f"start_detection called with source_type: {source_type}")
         self.input_source = source_type
         
         if source_type == "webcam":
@@ -99,11 +101,20 @@ class EmotionDetectionApp:
             
             try:
                 self.current_frame = cv2.imread(image_path)
-                if self.current_frame is None:
+                if self.current_frame is None: 
                     messagebox.showerror("Error", "Could not open image file")
                     return
-                process_image(self)
+                
+                #process_image(self)
+                create_image_analysis_interface(self)
+                self.is_running = True
+                self.thread = threading.Thread(target=lambda: _process_image_thread(self))
+                self.thread.daemon = True
+                self.thread.start()
+                
+                print("start_detection (image): After process_image")
                 return
+            
             except Exception as e:
                 messagebox.showerror("Error", f"Error processing image: {str(e)}")
                 return
@@ -114,6 +125,7 @@ class EmotionDetectionApp:
         self.thread = threading.Thread(target=lambda: process_video(self))
         self.thread.daemon = True
         self.thread.start()
+        
     
     def update_display(self):
         if self.frame_with_detection is None or not self.is_running:
