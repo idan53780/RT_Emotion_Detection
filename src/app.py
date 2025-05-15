@@ -152,6 +152,48 @@ class EmotionDetectionApp:
         except Exception as e:
             print(f"Error updating display: {e}")
     
+    def display_image(self):
+        if self.frame_with_detection is None:
+            return
+            
+        try:
+            frame_rgb = cv2.cvtColor(self.frame_with_detection, cv2.COLOR_BGR2RGB)
+            
+            try:
+                video_frame_width = self.video_frame.winfo_width()
+                video_frame_height = self.video_frame.winfo_height()
+            except:
+                video_frame_width = 640
+                video_frame_height = 480
+            
+            if video_frame_width <= 1 or video_frame_height <= 1:
+                video_frame_width = 640
+                video_frame_height = 480
+                
+            h, w = frame_rgb.shape[:2]
+            scale_w = video_frame_width / w
+            scale_h = video_frame_height / h
+            scale = min(scale_w, scale_h)
+            
+            new_w = int(w * scale)
+            new_h = int(h * scale)
+            
+            frame_resized = cv2.resize(frame_rgb, (new_w, new_h), interpolation=cv2.INTER_AREA)
+            
+            img = Image.fromarray(frame_resized)
+            img_tk = ImageTk.PhotoImage(image=img)
+            def set_image():
+                if hasattr(self, 'video_frame') and self.video_frame.winfo_exists():
+                    self.video_frame.config(image=img_tk)
+                    self.video_frame.image = img_tk
+            
+            # Schedule update to ensure GUI is ready
+            self.root.after(100, set_image)
+        except Exception as e:
+            print(f"Error displaying image: {e}")
+
+
+
     def take_screenshot(self):
         take_screenshot(self)
     
