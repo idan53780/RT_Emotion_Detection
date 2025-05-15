@@ -5,7 +5,7 @@ from PIL import Image, ImageTk
 import threading
 from .config import DETECTION_MODELS, EMOTION_MODELS, DEFAULT_DETECTOR, DEFAULT_EMOTION_MODEL, CONFIDENCE_THRESHOLD, HISTORY_LENGTH
 from .ui import create_start_screen, open_settings, create_app_interface,create_image_analysis_interface
-from .processing import process_video, _process_image_thread,process_image
+from .processing import process_video, _process_image_thread
 from .utils import get_smoothed_emotion, take_screenshot, save_analysis
 
 class EmotionDetectionApp:
@@ -105,7 +105,7 @@ class EmotionDetectionApp:
                     messagebox.showerror("Error", "Could not open image file")
                     return
                 
-                #process_image(self)
+                
                 create_image_analysis_interface(self)
                 self.is_running = True
                 self.thread = threading.Thread(target=lambda: _process_image_thread(self))
