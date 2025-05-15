@@ -152,11 +152,26 @@ def process_image(app):
         return
     
     from .ui import create_image_analysis_interface
+    # Set up the GUI
     create_image_analysis_interface(app)
     
-    threading.Thread(target=lambda: _process_image_thread(app)).start()
+    try:
+        # Process the image synchronously
+        process_frame(app)
+        # Display the processed image
+        app.display_image()
+        # Update results
+        emotion, confidence = app.get_smoothed_emotion() or ("Unknown", 0.0)
+        emotion_text = f"Emotion: {emotion} ({int(confidence*100)}%)" if emotion != "Unknown" else "No emotion detected"
+        app.root.after(0, lambda: app.result_label.config(text=emotion_text))
+        app.root.after(0, lambda: app.status_label.config(text="Analysis complete"))
+    except Exception as e:
+        print(f"Error in image processing: {e}")
+        app.root.after(0, lambda: app.result_label.config(text=f"Error: {str(e)}"))
+        app.root.after(0, lambda: app.status_label.config(text="Analysis failed"))
 
 def _process_image_thread(app):
+    # no use kept for 
     try:
         process_frame(app)
         app.root.after(0, lambda: app.status_label.config(text="Analysis complete"))
