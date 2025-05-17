@@ -100,10 +100,10 @@ def process_frame(app):
                 cv2.putText(
                     app.frame_with_detection,
                     emotion_text,
-                    (x1, y1 - 10),
+                    (x1, y1 - 5),
                     cv2.FONT_HERSHEY_SIMPLEX,
-                    1,
-                    (255, 255, 0),
+                    2,
+                    (0, 0, 255),
                     2,
                     cv2.LINE_AA
                 )

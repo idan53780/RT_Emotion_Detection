@@ -350,6 +350,7 @@ def create_app_interface(app):
         anchor=tk.E
     )
     version_label.pack(side=tk.RIGHT, padx=10, pady=5)
+    
 
 def create_image_analysis_interface(app):
     # Clear the root window
@@ -428,3 +429,4 @@ def create_image_analysis_interface(app):
         anchor=tk.W
     )
     app.status_label.pack(side=tk.LEFT, padx=10, pady=5)
+   
