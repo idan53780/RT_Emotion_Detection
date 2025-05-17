@@ -17,7 +17,17 @@ The goal is to create a tool for applications such as:
 ## 📌 Features
 - Real-time emotion detection via webcam or video file input
 - Static image analysis for emotion detection
-- Emotion detection using [DeepFace](https://github.com/serengil/deepface)
+- Emotion detection using [DeepFace](https://github.com/serengil/deepface) with models:
+  
+  - VGG-Face
+  - Facenet
+  - Facenet512
+  - OpenFace
+  - DeepFace
+  - DeepID
+  - ArcFace
+  - Dlib
+   
 - Face detection with:
   - Haar Cascade (default)
   - OpenCV DNN (deep learning-based, toggleable in settings)
