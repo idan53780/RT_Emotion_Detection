@@ -1,131 +1,129 @@
-# 🎭 Real Time Emotion Detection
+# 🎭 Real-Time Emotion Detection
 
-A real-time emotion recognition application using a webcam or video file input. This project is built with **Python**, **OpenCV**, **TensorFlow**, and a **Convolutional Neural Network (CNN)** model.
-<br>
-## 📚Project Description
+A real-time emotion recognition application using webcam, video, or image input. This project is built with **Python**, **OpenCV**, **TensorFlow**, and a **Convolutional Neural Network (CNN)** model.
 
-This project develops a system for real-time emotion detection from video. 
+## 📚 Project Description
 
-The system uses OpenCV for facial detection and a pre-trained machine learning model to classify the emotions displayed on faces.
+This project develops a system for real-time emotion detection from video or static images. It uses OpenCV for face detection and a pre-trained machine learning model to classify emotions displayed on faces.
 
-The goal is to create a tool that can assist in applications such as:
+The goal is to create a tool for applications such as:
 
-* User experience analysis
-* Communication aids for individuals with communication impairments
-* Audience reaction analysis
-
+- User experience analysis
+- Communication aids for individuals with impairments
+- Audience reaction analysis
 
 > 🚧 **This project is under active development.** Features and performance will improve in future versions.
-<br>
 
 ## 📌 Features
-- Real-time webcam or video file input
+- Real-time emotion detection via webcam or video file input
+- Static image analysis for emotion detection
 - Emotion detection using [DeepFace](https://github.com/serengil/deepface)
-- Face detection via:
+- Face detection with:
   - Haar Cascade (default)
-  - OpenCV DNN (deep learning-based, toggleable in app)
-- Project logo overlay
-- GUI 
-- Screenshot and video source switching 
+  - OpenCV DNN (deep learning-based, toggleable in settings)
+- Customizable settings (detector, model, confidence threshold, history length)
+- Screenshot capture with user-defined save location
+- Save analysis results as images
+- Project logo overlay in UI
+- User-friendly GUI with Tkinter
+- Video/image source switching
 
-<br>
 
 ## 🛠️ Tech Stack
-
 - **Python 3.10+**
 - **TensorFlow**
 - **OpenCV**
 - **NumPy**
-- **TKinter**
+- **Tkinter**
 - **Pillow**
-  
-
 
 ## 📁 Project Structure
 
 ```plaintext
 RT_Emotion_Detection/
-
+├── assets/                          # Logo and other static assets
+│   └── logo_icon.png
+├── Emotion_images/                  # Sample images for testing
 ├── models/                          # Pre-trained models and classifiers
-│   ├──  haarcascade_frontalface_default.xml
-|   ├──  opencv_face_detector.pbtxt
-│   └──  opencv_face_detector_uint8.pb 
+│   ├── haarcascade_frontalface_default.xml
+│   ├── opencv_face_detector.pbtxt
+│   └── opencv_face_detector_uint8.pb
+├── screenshots/                     # Saved screenshots
 ├── src/                             # Source code and main app logic
-│   └── main.py
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── processing.py
+│   ├── ui.py
+│   ├── utils.py
+│   └── oldmain.py                  # Legacy main script
+├── videos/                          # Sample videos for testing
 ├── .gitignore
 ├── LICENSE
+├── main.py                          # Entry point
 ├── README.md
 ├── requirements.txt
-└── venvi/                           # Virtual environment (excluded from Git)
-
-
-
-
-**⚠️  Please Note: This project is currently under active development.  ⚠️**
-
-Significant changes to the code, features, and functionality may occur.
-
+└── venv/                            # Virtual environment (excluded from Git)
 ```
 
+**⚠️ Note: This project is under active development. Significant changes to code, features, and functionality may occur.**
 
 ## 🚀 Getting Started
 
-1.  Clone the repository:
+### Prerequisites
+- Python 3.10 - (exactly)
+- Git
+- Virtual environment (recommended) 
 
-    ```bash
-    git clone [https://github.com/your_username/your_repo_name.git](https://github.com/your_username/your_repo_name.git)
-    ```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Idan53780/RT_Emotion_Detection.git
+   cd RT_Emotion_Detection
+   ```
 
-2.  Create a virtual environment:
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   ```
 
-    ```bash
-    python3 -m venv venv
-    ```
+3. Activate the virtual environment:
+   - **Linux/macOS**:
+     ```bash
+     source venv/bin/activate
+     ```
+   - **Windows (Git Bash)**:
+     ```bash
+     source venv/Scripts/activate
+     ```
 
-3.  Activate the virtual environment:
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    * Linux/macOS:
+### Usage
+1. Run the main script:
+   ```bash
+   python main.py
+   ```
 
-        ```bash
-        source venv/bin/activate
-        ```
-
-    * Windows (Git Bash):
-
-        ```bash
-        source venv/Scripts/activate
-        ```
-
-4.  Install the dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-<br>
-
-## 🗝️ Usage
-
-1.  Run the main script:
-
-    ```bash
-    python main.py  
-    ```
-<br>
+2. 🪄 Interact with the GUI:
+   - Adjust settings (face detector, emotion model, etc.).
+   - Select input source (webcam, video, or image).
+   - Capture screenshots or save analysis results.
+   
 
 ## 📝 Project Status
-
-This project is currently in development. The following features are still in progress or subject to change:
-
-* Accuracy of emotion recognition
-* Stability of facial detection
-* User interface
-* Performance optimization
-
+This project is in active development. Current areas of focus include:
+- Improving emotion recognition accuracy
+- Enhancing facial detection stability
+- Optimizing performance for real-time processing
+- Refining the user interface
+- Adding support for additional input formats
 
 ## 🙋‍♂️ Author
-Created by Idan53780
-
-
+Created by [Idan53780](https://github.com/Idan53780)
 
 
 
