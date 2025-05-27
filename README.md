@@ -12,7 +12,7 @@ The goal is to create a tool for applications such as:
 - Communication aids for individuals with impairments
 - Audience reaction analysis
 
-> 🚧 **This project is under active development.** Features and performance will improve in future versions.
+
 
 ## 📌 Features
 - Real-time emotion detection via webcam or video file input
@@ -47,6 +47,7 @@ The goal is to create a tool for applications such as:
 - **Tkinter**
 - **Pillow**
 
+
 ## 📁 Project Structure
 
 ```plaintext
@@ -75,8 +76,17 @@ RT_Emotion_Detection/
 ├── requirements.txt
 └── venv/                            # Virtual environment (excluded from Git)
 ```
+## 📸 App in Action
 
-**⚠️ Note: This project is under active development. Significant changes to code, features, and functionality may occur.**
+Below are example screenshots showing the real-time emotion detection system 
+
+![1ex](https://github.com/user-attachments/assets/b7bfb860-a1aa-4b9b-85a9-734b16e77b34)
+
+![ex2](https://github.com/user-attachments/assets/4045d8fc-bf38-449f-8e21-52433c8a0e82)
+
+![image_example](https://github.com/user-attachments/assets/1c3bc56e-2be6-4013-b254-d7368e33e081)
+
+
 
 ## 🚀 Getting Started
 
