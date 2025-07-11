@@ -143,6 +143,8 @@ This project is in active development. Current areas of focus include:
 - Optimizing performance for real-time processing
 - Refining the user interface
 - Adding support for additional input formats
+
+# all the above has been added ✅📸
 __________________________________________________
 ## 🙋‍♂️ Author
 Created by [Idan53780](https://github.com/Idan53780)
