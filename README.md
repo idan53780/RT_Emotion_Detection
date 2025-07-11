@@ -135,13 +135,15 @@ Below are example screenshots showing the real-time emotion detection system
    
 
 ## 📝 Project Status
+
+## done ✅
 This project is in active development. Current areas of focus include:
 - Improving emotion recognition accuracy
 - Enhancing facial detection stability
 - Optimizing performance for real-time processing
 - Refining the user interface
 - Adding support for additional input formats
-
+__________________________________________________
 ## 🙋‍♂️ Author
 Created by [Idan53780](https://github.com/Idan53780)
 
