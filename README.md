@@ -3,7 +3,7 @@
 A real-time emotion recognition application using webcam, video, or image input. This project is built with **Python**, **OpenCV**, **TensorFlow**, and a **Convolutional Neural Network (CNN)** model.
 
 
-
+## 📺 video link 
 <a href="https://www.youtube.com/watch?v=AWi3xkZYNZc">
   <img src="https://img.youtube.com/vi/AWi3xkZYNZc/maxresdefault.jpg" width="600">
 </a>
