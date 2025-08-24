@@ -2,6 +2,12 @@
 
 A real-time emotion recognition application using webcam, video, or image input. This project is built with **Python**, **OpenCV**, **TensorFlow**, and a **Convolutional Neural Network (CNN)** model.
 
+
+
+<a href="https://www.youtube.com/watch?v=AWi3xkZYNZc">
+  <img src="https://img.youtube.com/vi/AWi3xkZYNZc/maxresdefault.jpg" width="600">
+</a>
+
 ## 📚 Project Description
 
 This project develops a system for real-time emotion detection from video or static images. It uses OpenCV for face detection and a pre-trained machine learning model to classify emotions displayed on faces.
